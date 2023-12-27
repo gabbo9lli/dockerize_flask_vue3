@@ -8,6 +8,13 @@ services:
       - 5001:5000
     env_file:
       - ./.env.dev
+
+  client:
+    build: ./services/client
+    ports:
+      - 3000:3000
+    env_file:
+      - ./services/client/config/.env
 #     depends_on:
 #       - db
 #   db:
